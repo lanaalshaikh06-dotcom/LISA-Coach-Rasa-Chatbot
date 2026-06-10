@@ -1,0 +1,123 @@
+version: "3.1"
+
+rules:
+
+# تحية ووداع
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+# FAQs الأساسية
+- rule: Membership & prices FAQ
+  steps:
+    - intent: ask_membership_prices
+    - action: utter_membership_info
+
+- rule: Opening hours & location FAQ
+  steps:
+    - intent: ask_opening_hours_location
+    - action: utter_opening_hours_location
+
+- rule: Services & facilities FAQ
+  steps:
+    - intent: ask_services_facilities
+    - action: utter_services_facilities
+
+- rule: Fitness goals guidance FAQ
+  steps:
+    - intent: ask_fitness_goals_guidance
+    - action: utter_fitness_goals_guidance
+
+- rule: Healthy habits FAQ
+  steps:
+    - intent: ask_healthy_habits
+    - action: utter_healthy_habits
+
+- rule: Health & safety FAQ
+  steps:
+    - intent: ask_health_safety
+    - action: utter_health_safety
+
+# عن البوت
+- rule: About Liza / bot FAQ
+  steps:
+    - intent: ask_about_bot
+    - action: utter_about_bot
+
+# إرشادات النشاط البدني
+- rule: Respond to adult guidelines
+  steps:
+    - intent: ask_guidelines_adults
+    - action: utter_guidelines_adults
+
+- rule: Respond to children guidelines
+  steps:
+    - intent: ask_guidelines_children
+    - action: utter_guidelines_children
+
+- rule: Respond to older adults guidelines
+  steps:
+    - intent: ask_guidelines_older_adults
+    - action: utter_guidelines_older_adults
+
+- rule: Respond to pregnancy guidelines
+  steps:
+    - intent: ask_guidelines_pregnancy
+    - action: utter_guidelines_pregnancy
+
+- rule: Respond to chronic conditions guidelines
+  steps:
+    - intent: ask_guidelines_chronic_conditions
+    - action: utter_guidelines_chronic_conditions
+
+# الأسئلة الإضافية
+- rule: Answer payment methods questions
+  steps:
+    - intent: ask_payment_methods
+    - action: utter_ask_payment_methods
+
+- rule: Answer cancellation policy questions
+  steps:
+    - intent: ask_cancellation_policy
+    - action: utter_ask_cancellation_policy
+
+- rule: Answer peak hours questions
+  steps:
+    - intent: ask_peak_hours
+    - action: utter_ask_peak_hours
+
+- rule: Answer equipment availability questions
+  steps:
+    - intent: ask_equipment_availability
+    - action: utter_ask_equipment_availability
+
+- rule: Answer lockers policy questions
+  steps:
+    - intent: ask_lockers_policy
+    - action: utter_ask_lockers_policy
+
+- rule: Answer hygiene rules questions
+  steps:
+    - intent: ask_hygiene_rules
+    - action: utter_ask_hygiene_rules
+
+- rule: Answer guest policy questions
+  steps:
+    - intent: ask_guest_policy
+    - action: utter_ask_guest_policy 
+- rule: Read from Muscle & Strength
+  steps:
+    - intent: ask_from_website
+    - action: action_read_from_muscleandstrength
+
+# fallback rule
+- rule: Fallback rule
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallback

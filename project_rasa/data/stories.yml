@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+  # المسار الإيجابي
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  # المسار الحزين 1
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  # المسار الحزين 2
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  # الأسئلة الإضافية
+  - story: payment methods inquiry
+    steps:
+      - intent: ask_payment_methods
+      - action: utter_ask_payment_methods
+
+  - story: cancellation policy inquiry
+    steps:
+      - intent: ask_cancellation_policy
+      - action: utter_ask_cancellation_policy
+
+  - story: peak hours inquiry
+    steps:
+      - intent: ask_peak_hours
+      - action: utter_ask_peak_hours
+
+  - story: equipment availability inquiry
+    steps:
+      - intent: ask_equipment_availability
+      - action: utter_ask_equipment_availability
+
+  - story: lockers policy inquiry
+    steps:
+      - intent: ask_lockers_policy
+      - action: utter_ask_lockers_policy
+
+  - story: hygiene rules inquiry
+    steps:
+      - intent: ask_hygiene_rules
+      - action: utter_ask_hygiene_rules
+
+  - story: guest policy inquiry
+    steps:
+      - intent: ask_guest_policy
+      - action: utter_ask_guest_policy

@@ -1,0 +1,157 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_membership_prices
+  - ask_opening_hours_location
+  - ask_services_facilities
+  - ask_fitness_goals_guidance
+  - ask_healthy_habits
+  - ask_health_safety
+  - ask_about_bot
+  - ask_guidelines_adults
+  - ask_guidelines_children
+  - ask_guidelines_older_adults
+  - ask_guidelines_pregnancy
+  - ask_guidelines_chronic_conditions
+  - ask_payment_methods
+  - ask_cancellation_policy
+  - ask_peak_hours
+  - ask_equipment_availability
+  - ask_lockers_policy
+  - ask_hygiene_rules
+  - ask_guest_policy
+  - nlu_fallback
+  - ask_from_website
+
+responses:
+
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_membership_info:
+    - text: |
+        We offer several membership options such as monthly, 3-month, 6-month, and yearly plans.  
+        Prices can vary based on the branch, duration, and whether you choose personal training.
+        If you tell me your budget and how often you plan to train, I can suggest the most suitable plan for you.  
+        For the exact price list and current discounts, our front desk team can give you the latest details.
+
+  utter_opening_hours_location:
+    - text: |
+        Our gym’s opening hours and location can vary slightly by branch.  
+        Typically, we are open on weekdays and weekends with extended hours.  
+        Please tell me which branch or city you are interested in, and I can share the usual opening hours and directions.  
+        If you prefer, I can also send you a Google Maps link for easier navigation.
+
+  utter_services_facilities:
+    - text: |
+        Our gym is designed to support different fitness levels and goals.  
+        Common facilities include:
+        • Strength/weight training area  
+        • Cardio machines  
+        • Group classes such as HIIT, yoga, or dance  
+        • Personal training sessions  
+        • Changing rooms and lockers  
+        Some locations also offer ladies-only areas or ladies-only hours.  
+        If you tell me what you’re looking for, I can confirm whether it’s available.
+
+  utter_fitness_goals_guidance:
+    - text: |
+        Great goal! The best plan depends on your experience, schedule, and health status.  
+        • For weight loss: combine regular cardio with strength training 2–3 days per week.  
+        • For building muscle: focus on strength training several times per week.  
+        • For general fitness: mix cardio, strength, and flexibility work.  
+        Many people benefit from training 3–5 days per week.  
+        For a personalized program, it’s best to speak with one of our coaches.
+
+  utter_healthy_habits:
+    - text: |
+        Healthy habits can support your fitness progress:
+        • Move regularly  
+        • Drink water throughout the day  
+        • Maintain consistent sleep  
+        • Eat balanced meals  
+        Small, consistent changes are more effective than extreme routines.
+
+  utter_health_safety:
+    - text: |
+        Your safety is important.  
+        If you have medical conditions, consult your doctor before starting exercise.  
+        Stop immediately if you feel:
+        • Chest pain  
+        • Severe shortness of breath  
+        • Dizziness  
+        • Sudden strong pain  
+        For tailored guidance, speak with a qualified coach.
+
+  utter_about_bot:
+    - text: |
+        I’m Liza, your AI fitness assistant.  
+        I can share general fitness guidance, gym information, and healthy lifestyle tips.
+
+  utter_guidelines_adults:
+    - text: "Adults should do 150–300 minutes of moderate aerobic activity weekly plus strength training."
+
+  utter_guidelines_children:
+    - text: "Children should do at least 60 minutes of moderate-to-vigorous activity daily."
+  utter_guidelines_older_adults:
+    - text: "Older adults should follow adult guidelines and include balance and strength exercises."
+
+  utter_guidelines_pregnancy:
+    - text: "Pregnant women should aim for 150 minutes of moderate aerobic activity weekly."
+
+  utter_guidelines_chronic_conditions:
+    - text: "Adults with chronic conditions should do 150–300 minutes of moderate activity weekly."
+
+  utter_ask_payment_methods:
+    - text: "We accept cash, credit cards, and other available payment methods depending on the plan."
+
+  utter_ask_cancellation_policy:
+    - text: "Membership cancellation depends on our policy. Please contact reception for details."
+
+  utter_ask_peak_hours:
+    - text: "The gym is usually busiest in the evening. Mornings and early afternoons are quieter."
+
+  utter_ask_equipment_availability:
+    - text: "We provide a wide range of cardio and strength equipment suitable for all levels."
+
+  utter_ask_lockers_policy:
+    - text: "Lockers are available for members to store belongings during training."
+
+  utter_ask_hygiene_rules:
+    - text: "Please use towels and clean equipment after use to maintain hygiene."
+
+  utter_ask_guest_policy:
+    - text: "Guest access depends on the membership type. Please check with the front desk."
+
+  utter_fallback:
+    - text: "Sorry, I can only answer questions related to gym services and policies."
+
+actions:
+  - action_read_from_muscleandstrength
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

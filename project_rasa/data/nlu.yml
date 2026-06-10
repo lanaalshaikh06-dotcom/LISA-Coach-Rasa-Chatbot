@@ -1,0 +1,188 @@
+version: "3.1"
+
+nlu:
+
+# تحية
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hi there
+
+# وداع
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - take care
+
+# تحدي البوت
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you human?
+    - who are you?
+    - what are you?
+
+# أسعار الاشتراك
+- intent: ask_membership_prices
+  examples: |
+    - what are your membership prices?
+    - how much is the membership?
+    - what does the gym cost?
+    - tell me about your prices
+
+# ساعات العمل والموقع
+- intent: ask_opening_hours_location
+  examples: |
+    - where are you located?
+    - what are your opening hours?
+    - when do you open?
+    - where is your gym?
+
+# الخدمات والمرافق
+- intent: ask_services_facilities
+  examples: |
+    - what services do you offer?
+    - what facilities do you have?
+    - do you have trainers?
+    - what equipment is available?
+
+# أهداف اللياقة
+- intent: ask_fitness_goals_guidance
+  examples: |
+    - how can I reach my fitness goals?
+    - help me improve my fitness
+    - how do I get stronger?
+
+# العادات الصحية
+- intent: ask_healthy_habits
+  examples: |
+    - give me healthy habits
+    - how can I stay healthy?
+    - tips for a healthy lifestyle
+
+# الصحة والسلامة
+- intent: ask_health_safety
+  examples: |
+    - what are your health and safety rules?
+    - do you have safety guidelines?
+    - how do you keep members safe?
+
+# عن البوت
+- intent: ask_about_bot
+  examples: |
+    - who are you?
+    - tell me about yourself
+    - what can you do?
+
+# إرشادات البالغين
+- intent: ask_guidelines_adults
+  examples: |
+    - what are the guidelines for adults?
+    - adult activity recommendations
+    - how much should adults exercise?
+
+# إرشادات الأطفال
+- intent: ask_guidelines_children
+  examples: |
+    - what are the guidelines for children?
+    - kids activity recommendations
+    - how much should children exercise?
+
+# إرشادات كبار السن
+- intent: ask_guidelines_older_adults
+  examples: |
+    - what are the guidelines for older adults?
+    - seniors activity recommendations
+    - how much should older adults exercise?
+
+# إرشادات الحمل
+- intent: ask_guidelines_pregnancy
+  examples: |
+    - what are the guidelines for pregnancy?
+    - can pregnant women exercise?
+    - pregnancy activity recommendations
+
+# إرشادات الأمراض المزمنة
+- intent: ask_guidelines_chronic_conditions
+  examples: |
+    - what are the guidelines for chronic conditions?
+    - can people with chronic diseases exercise?
+    - chronic conditions activity recommendations
+
+# طرق الدفع
+- intent: ask_payment_methods
+  examples: |
+    - what payment methods do you accept?
+    - can I pay with card?
+    - do you take cash?
+
+# سياسة الإلغاء
+- intent: ask_cancellation_policy
+  examples: |
+    - what is your cancellation policy?
+    - can I cancel my membership?
+    - how do I stop my subscription?
+
+# ساعات الذروة
+- intent: ask_peak_hours
+  examples: |
+    - when is the gym crowded?
+    - what are your peak hours?
+    - when is the gym busiest?
+
+# توفر المعدات
+- intent: ask_equipment_availability
+  examples: |
+    - is the equipment available?
+    - do you have free machines now?
+    - is the gym full?
+
+# سياسة الخزائن
+- intent: ask_lockers_policy
+  examples: |
+    - what is your lockers policy?
+    - do you have lockers?
+    - can I store my stuff?
+
+# قواعد النظافة
+- intent: ask_hygiene_rules
+  examples: |
+    - what are your hygiene rules?
+    - do you clean the equipment?
+    - how do you keep the gym clean?
+
+# سياسة الضيوف
+- intent: ask_guest_policy
+  examples: |
+    - can I bring a guest?
+    - what is your guest policy?
+    - do you allow visitors?
+
+# ⭐️⭐️⭐️ Fallback / Feedback Intent ⭐️⭐️⭐️
+- intent: out_of_scope
+  examples: |
+    - what is the capital of mars?
+    - can you cook for me?
+    - tell me who will win the world cup
+    - sing me a song
+    - what is 999999999999 * 888888888888?
+    - do you know my password?
+    - can you drive a car?
+    - I want to fly to the moon
+    - random text asdasdasd
+    - ??????
+
+
+
+- intent: ask_from_website
+  examples: |
+    - get info from website
+    - fetch data
+    - show me the website info
+    - bring me data from the link
